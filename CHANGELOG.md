@@ -1,3 +1,6 @@
+## 1.1.0+1
+### Fixes:
+  - Pub.dev readme file fix.
 ## 1.1.0
 
 ### Fixes:
