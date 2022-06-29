@@ -207,6 +207,10 @@ class CustomRefreshIndicatorState extends State<CustomRefreshIndicator>
   }
 
   bool _handleScrollStartNotification(ScrollStartNotification notification) {
+    if (controller.state == IndicatorState.dragging) {
+      setIndicatorState(IndicatorState.idle);
+    }
+
     _canStart = controller.state == IndicatorState.idle &&
         (widget.reversed
             ? notification.metrics.extentAfter == 0
